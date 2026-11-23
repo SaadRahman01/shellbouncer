@@ -1,0 +1,21 @@
+name: Missed dangerous command
+description: A dangerous command shellbouncer let through (for actively exploitable bypasses, use private vulnerability reporting instead)
+labels: [bypass]
+body:
+  - type: input
+    id: command
+    attributes:
+      label: Command
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: What it would do
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Output of `shellbouncer check '<command>'`
+      render: text
